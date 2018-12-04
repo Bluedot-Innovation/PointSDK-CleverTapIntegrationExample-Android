@@ -1,6 +1,6 @@
-# UrbanAirship Events Example
+# CleverTap Events Example
 
-A sample project used to test the integration between UrbanAirship SDK and Bluedot Point SDK.
+A sample project used to test the integration between CleverTap SDK and Bluedot Point SDK.
 
 ## Getting started
 
@@ -84,11 +84,11 @@ public void onCheckedOutFromBeacon(BeaconInfo beaconInfo, ZoneInfo zoneInfo, int
 }
 ```
 
-### Implement `urbanairship-fcm`
+### Implement `clevertap-android-sdk`
 
-UrbanAirship has to be initialised before sending any check-in/checkou-out events.
+CleverTap has to be initialised before sending any check-in/check-out events.
 
-1. Add the `urbanairship-fcm` module as a dependency in your application.
+1. Add the `clevertap-android-sdk` module as a dependency in your application.
 
 ```gradle
 dependencies {
@@ -120,7 +120,7 @@ public void onCreate() {
 
     ...
 
-    // take off UrbanAirship SDK
+    // Initialise CleverTap 
     ActivityLifecycleCallback.register(this);
 }
 ```
@@ -134,7 +134,7 @@ or add `Autopilot` configuration to `AndroidManifest.xml`
     android:name="com.clevertap.android.sdk.Application">
 ```
 
-4. Track `UrbanAirship` events in your checkins/checkouts
+4. Track `CleverTap` events in your checkins/checkouts
 
 ```java
 @Override
