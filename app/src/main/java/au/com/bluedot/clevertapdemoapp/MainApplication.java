@@ -10,8 +10,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.NotificationCompat;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
 
 import com.clevertap.android.sdk.ActivityLifecycleCallback;
 import com.clevertap.android.sdk.CleverTapAPI;
@@ -38,7 +38,7 @@ import static android.app.Notification.PRIORITY_MAX;
 public class MainApplication extends Application implements ServiceStatusListener, ApplicationNotificationListener {
 
     private ServiceManager serviceManager;
-    private final String API_KEY = "9b2e2d00-bc8f-11e8-a698-02a5c41ebc5e"; //API key for the Point Demo App 
+    private final String API_KEY = "Your API key"; //API key for the Point Demo App
     private final boolean RESTART_MODE = false;
     private NotificationChannel notificationChannel = null;
     private final String EVENT_PLACE_ENTERED = "bluedot_place_entered";
