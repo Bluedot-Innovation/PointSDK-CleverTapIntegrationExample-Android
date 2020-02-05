@@ -1,7 +1,7 @@
 package au.com.bluedot.clevertapdemoapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.clevertap.android.sdk.CleverTapAPI;
