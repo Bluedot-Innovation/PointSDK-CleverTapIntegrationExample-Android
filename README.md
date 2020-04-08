@@ -13,8 +13,10 @@ This project depends on `PointSDK-Android` and `clevertap-android-sdk`. Both dep
 ```gradle
 dependencies {
     ...
-
-    implementation 'com.github.Bluedot-Innovation:PointSDK-Android:14.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha04'
+    implementation 'com.gitlab.bluedotio.android:point_sdk_android:15.0.0'
 }
 ```
 
@@ -94,7 +96,8 @@ CleverTap has to be initialised before sending any check-in/check-out events.
 dependencies {
     ...
 
-    implementation 'com.clevertap.android:clevertap-android-sdk:3.6.3'
+    implementation 'com.clevertap.android:clevertap-android-sdk:3.7.2'
+    implementation 'com.android.installreferrer:installreferrer:1.0'
     implementation 'androidx.appcompat:appcompat:1.0.0'
     implementation 'androidx.core:core:1.0.0'
     implementation 'com.google.firebase:firebase-messaging:19.0.1'
