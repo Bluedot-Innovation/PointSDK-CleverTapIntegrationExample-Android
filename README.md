@@ -18,6 +18,14 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0-alpha04'
     implementation 'com.gitlab.bluedotio.android:point_sdk_android:15.0.0'
 }
+
+android {
+    ...
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 ```
 
 2. Request permissions in `AndroidManifest.xml`
