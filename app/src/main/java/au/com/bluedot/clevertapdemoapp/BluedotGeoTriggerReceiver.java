@@ -50,11 +50,6 @@ public class BluedotGeoTriggerReceiver extends GeoTriggeringEventReceiver {
                 context);
     }
 
-
-    private void sendCustomEvent(String eventName, ZoneInfo zoneInfo, Map<String, String> customDataMap, Context context) {
-        sendCustomEvent(eventName, zoneInfo, -1, customDataMap, context);
-    }
-
     private void sendCustomEvent(String eventName, ZoneInfo zoneInfo, int dwellTime, Map<String, String> customDataMap, Context context) {
         CleverTapAPI cleverTap = CleverTapAPI.getDefaultInstance(context);
         HashMap<String, Object> checkInAction = new HashMap<String, Object>();
