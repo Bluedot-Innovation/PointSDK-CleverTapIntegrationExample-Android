@@ -44,6 +44,22 @@
             </intent-filter>
         </service>
 
+        <receiver android:name=".BluedotErrorReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="io.bluedot.point.SERVICE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".BluedotGeoTriggerReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="io.bluedot.point.GEOTRIGGER" />
+            </intent-filter>
+        </receiver>
+
         <meta-data
             android:name="CLEVERTAP_ACCOUNT_ID"
             android:value="Your CleverTap Account ID"/>

@@ -3,7 +3,7 @@ package au.com.bluedot.clevertapdemoapp;
 import android.os.Bundle;
 
 import com.clevertap.android.sdk.CleverTapAPI;
-import com.clevertap.android.sdk.NotificationInfo;
+import com.clevertap.android.sdk.pushnotification.NotificationInfo;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -40,5 +40,15 @@ public class MainFirebaseMessagingService extends FirebaseMessagingService {
     public void onSendError(String s, Exception e) {
         super.onSendError(s, e);
         System.out.println("-- onSendError: " + s + " e: " + e.getMessage());
+    }
+
+    @Override
+    public void onNewToken(String token) {
+        CleverTapAPI.getDefaultInstance(this).pushFcmRegistrationId(token,true);
+        System.out.println("Token: " + token);
+        // If you want to send messages to this application instance or
+        // manage this apps subscriptions on the server side, send the
+        // Instance ID token to your app server.
+        //sendRegistrationToServer(token);
     }
 }
